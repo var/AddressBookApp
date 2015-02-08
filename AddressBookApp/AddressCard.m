@@ -19,24 +19,33 @@
     return self;
 }
 
-- (id) initWithName:(NSString *)name EmailAddress:(NSString *)email PhoneNumber:(NSString *)phone{
-    return self;
+- (id) initWithName:(NSString *)n EmailAddress:(NSString *)e PhoneNumber:(NSString *)p{
+    if ([super init]){
+        name = n;
+        email = e;
+        phone = p;
+        
+        return self;
+    }
+    else
+        return nil;
 }
 
 +(AddressCard *)addressCardWithName:(NSString *)name EmailAddress:(NSString *)email PhoneNumber:(NSString *)phone{
-    return nil;
+    return [[self alloc] initWithName:name EmailAddress:email PhoneNumber:phone];
 }
 
 - (void)dealloc{
-    printf("just a message");
+    printf("dealloc \n");
 }
 
-- (BOOL)compareByName{
+- (BOOL)compareByName:(AddressCard*)anotherCard{
+    
     return YES;
 }
 
 - (void)print {
-    printf("todo");
+    NSLog(@"Name: %@, Email: %@, Phone: %@", name, email, phone);
 }
 
 

@@ -16,7 +16,7 @@
 - (id) init;
 + (AddressCard*)addressCardWithName:(NSString*)name EmailAddress:(NSString*)email PhoneNumber:(NSString*)phone;
 - (id)initWithName:(NSString*)name EmailAddress:(NSString*)email PhoneNumber:(NSString*)phone;
-- (BOOL)compareByName;
+- (BOOL)compareByName:(AddressCard*)anotherCard;
 - (void)print;
 - (void)dealloc;
 
