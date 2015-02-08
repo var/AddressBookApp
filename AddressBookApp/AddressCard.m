@@ -13,5 +13,31 @@
     NSString *name, *email, *phone;
 }
 
+@synthesize name, email, phone;
+
+- (id) init{
+    return self;
+}
+
+- (id) initWithName:(NSString *)name EmailAddress:(NSString *)email PhoneNumber:(NSString *)phone{
+    return self;
+}
+
++(AddressCard *)addressCardWithName:(NSString *)name EmailAddress:(NSString *)email PhoneNumber:(NSString *)phone{
+    return nil;
+}
+
+- (void)dealloc{
+    printf("just a message");
+}
+
+- (BOOL)compareByName{
+    return YES;
+}
+
+- (void)print {
+    printf("todo");
+}
+
 
 @end

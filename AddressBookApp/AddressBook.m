@@ -8,6 +8,8 @@
 
 #import "AddressBook.h"
 
-@implementation AddressBook
+@implementation AddressBook {
+    NSMutableArray* cards;
+}
 
 @end

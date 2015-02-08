@@ -10,15 +10,15 @@
 
 @interface AddressCard : NSObject
 
-// getter methods are just named after the ivar
-// to match obj-c's naming convention
+@property NSString *name, *email, *phone;
 
-- (NSString*)email;
-- (NSString*)phone;
-- (NSString*)name;
 
-- (void)setEmail;
-- (void)setPhone;
-- (void)setName;
+- (id) init;
++ (AddressCard*)addressCardWithName:(NSString*)name EmailAddress:(NSString*)email PhoneNumber:(NSString*)phone;
+- (id)initWithName:(NSString*)name EmailAddress:(NSString*)email PhoneNumber:(NSString*)phone;
+- (BOOL)compareByName;
+- (void)print;
+- (void)dealloc;
+
 
 @end
