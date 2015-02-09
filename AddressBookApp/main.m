@@ -23,6 +23,15 @@ int main(int argc, const char * argv[]) {
         c.phone = @"9029029029";
         
         [c print];
+        
+        
+        AddressCard *c2 = [AddressCard addressCardWithName:@"adam" EmailAddress:@"test@live.ca" PhoneNumber:@"9029000000"];
+        
+        [c2 print];
+        
+        NSLog(@"c and c2 have the same names: %hhd",[c compareByName:c2]);
+        
+        [c compare:c2];
     
     }
     return 0;

@@ -12,11 +12,10 @@
 
 @property NSString *name, *email, *phone;
 
-
-- (id) init;
 + (AddressCard*)addressCardWithName:(NSString*)name EmailAddress:(NSString*)email PhoneNumber:(NSString*)phone;
 - (id)initWithName:(NSString*)name EmailAddress:(NSString*)email PhoneNumber:(NSString*)phone;
 - (BOOL)compareByName:(AddressCard*)anotherCard;
+- (void)compare:(AddressCard*)anotherCard;
 - (void)print;
 - (void)dealloc;
 

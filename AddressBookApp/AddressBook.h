@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AddressCard.h"
 
 @interface AddressBook : NSObject
+
+- (AddressCard*)findWithName;
+- (id)initWithSize;
+- (AddressBook*)adressBookWithSize:(int)size;
+- (void)findAndDisplayWithName;
+- (void)removeWithName;
+- (void)sort;
+- (void)printAll;
+- (void)dealloc;
 
 @end
