@@ -32,6 +32,16 @@ int main(int argc, const char * argv[]) {
         NSLog(@"c and c2 have the same names: %hhd",[c compareByName:c2]);
         
         [c compare:c2];
+        
+        AddressBook *a = [AddressBook adressBookWithSize:10];
+        
+        [a addWithName:@"vimal" EmailAddress:@"vimal@ramaka.com" PhoneNumber:@"9029029029"];
+        [a addWithName:@"vimal" EmailAddress:@"vimal@ramaka.com" PhoneNumber:@"9029029029"];
+        [a addWithName:@"vimal" EmailAddress:@"vimal@ramaka.com" PhoneNumber:@"9029029029"];
+        
+        [a printAll];
+        
+        
     
     }
     return 0;

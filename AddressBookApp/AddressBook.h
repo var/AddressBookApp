@@ -11,11 +11,12 @@
 
 @interface AddressBook : NSObject
 
-- (AddressCard*)findWithName;
-- (id)initWithSize;
-- (AddressBook*)adressBookWithSize:(int)size;
-- (void)findAndDisplayWithName;
-- (void)removeWithName;
+- (AddressCard*)findWithName:(NSString*)name;
+- (id)initWithSize:(NSInteger)size;
++ (AddressBook*)adressBookWithSize:(NSInteger)size;
+- (void)findAndDisplayWithName:(NSString*)name;
+- (void)removeWithName:(NSString*)name;
+- (void)addWithName:(NSString*)name EmailAddress:(NSString*)email PhoneNumber:(NSString*)phone;
 - (void)sort;
 - (void)printAll;
 - (void)dealloc;
